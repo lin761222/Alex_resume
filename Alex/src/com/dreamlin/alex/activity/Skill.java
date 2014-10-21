@@ -1,13 +1,13 @@
-package com.example.alex.activity;
+package com.dreamlin.alex.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.alex.R;
-import com.example.alex.adapter.DemoAdapter;
-import com.example.alex.adapter.SkillAdapter;
+import com.dreamlin.alex.R;
+import com.dreamlin.alex.adapter.DemoAdapter;
+import com.dreamlin.alex.adapter.SkillAdapter;
 
 public class Skill extends Activity {
 	ListView listView;

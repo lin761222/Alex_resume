@@ -1,4 +1,4 @@
-package com.example.alex.activity;
+package com.dreamlin.alex.activity;
 
 import android.app.Activity;
 import android.os.Bundle;

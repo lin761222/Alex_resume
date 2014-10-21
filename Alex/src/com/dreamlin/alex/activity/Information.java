@@ -1,4 +1,4 @@
-package com.example.alex.activity;
+package com.dreamlin.alex.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,7 +7,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.alex.R;
+import com.dreamlin.alex.R;
 
 public class Information extends Activity {
 	@Override

@@ -1,11 +1,11 @@
-package com.example.alex.activity;
+package com.dreamlin.alex.activity;
 
 import java.lang.ref.PhantomReference;
 
-import com.example.alex.R;
-import com.example.alex.R.id;
-import com.example.alex.R.layout;
-import com.example.alex.R.menu;
+import com.dreamlin.alex.R;
+import com.dreamlin.alex.R.id;
+import com.dreamlin.alex.R.layout;
+import com.dreamlin.alex.R.menu;
 
 import android.app.Activity;
 import android.content.Intent;

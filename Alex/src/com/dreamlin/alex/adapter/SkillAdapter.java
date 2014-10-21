@@ -1,4 +1,4 @@
-package com.example.alex.adapter;
+package com.dreamlin.alex.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,21 +10,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.alex.R;
+import com.dreamlin.alex.R;
 
-public class DemoAdapter extends BaseAdapter {
+public class SkillAdapter extends BaseAdapter {
 	String[] titles;
 	Context context;
-	String content[];
-	String[] date;
+	int[] imgTitles;
+	String[] content;
 
-	public DemoAdapter(Context context, String[] titles, String content[],
-			String[] date) {
-		// TODO Auto-generated constructor stub
-		this.titles = titles;
+	public SkillAdapter(Context context, String[] titles, int[] imgTitles,
+			String[] content) {
 		this.context = context;
+		this.titles = titles;
+		this.imgTitles = imgTitles;
 		this.content = content;
-		this.date = date;
 	}
 
 	@Override
@@ -50,30 +49,29 @@ public class DemoAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		Holder holder;
 		if (view == null) {
-			view = LinearLayout.inflate(context, R.layout.item_demo, null);
+			view = LinearLayout.inflate(context, R.layout.item_skill, null);
 			holder = new Holder();
 			holder.title = (TextView) view.findViewById(R.id.textView1);
+			holder.imgTitle = (ImageView) view.findViewById(R.id.img1);
 			holder.img = (ImageView) view.findViewById(R.id.imageView2);
-			holder.content = (TextView) view.findViewById(R.id.textView2);
-			holder.date = (TextView) view.findViewById(R.id.textView3);
+			holder.content = (TextView) view.findViewById(R.id.txv2);
 			view.setTag(holder);
 
-			// TextView title = (TextView)view.findViewById(R.id.textView1);
 		} else {
 			holder = (Holder) view.getTag();
 		}
-
+		holder.imgTitle.setImageResource(imgTitles[position]);
+		// holder.imgTitle.setBackgroundResource(imgTitles[position]);
 		holder.title.setText(titles[position]);
 		holder.content.setText(content[position]);
-		holder.date.setText(date[position]);
-		holder.img.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				((Activity) context).finish();
-			}
-		});
+		// holder.img.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// // TODO Auto-generated method stub
+		// ((Activity) context).finish();
+		// }
+		// });
 
 		return view;
 	}
@@ -81,7 +79,7 @@ public class DemoAdapter extends BaseAdapter {
 	class Holder {
 		TextView title;
 		ImageView img;
+		ImageView imgTitle;
 		TextView content;
-		TextView date;
 	}
 }

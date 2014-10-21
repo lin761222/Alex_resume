@@ -1,7 +1,7 @@
-package com.example.alex.activity;
+package com.dreamlin.alex.activity;
 
-import com.example.alex.R;
-import com.example.alex.adapter.MainAdapter;
+import com.dreamlin.alex.R;
+import com.dreamlin.alex.adapter.MainAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;

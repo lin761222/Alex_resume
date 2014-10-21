@@ -1,4 +1,4 @@
-package com.example.alex.adapter;
+package com.dreamlin.alex.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.alex.R;
+import com.dreamlin.alex.R;
 
 public class MainAdapter extends BaseAdapter {
 	Context context;
