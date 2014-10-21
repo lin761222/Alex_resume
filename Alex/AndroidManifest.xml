@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -31,10 +32,13 @@
             android:label="作品集" >
         </activity>
         <activity
-            android:name="com.example.alex.activity.Skill"
+            android:name=".activity.Skill"
             android:label="@string/title_activity_skill" >
         </activity>
-        
+        <activity
+            android:name="com.example.alex.activity.Contact"
+            android:label="聯繫我" >
+        </activity>
     </application>
 
 </manifest>

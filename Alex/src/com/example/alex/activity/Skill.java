@@ -11,12 +11,12 @@ import com.example.alex.adapter.SkillAdapter;
 
 public class Skill extends Activity {
 	ListView listView;
-	String[] titles = { "Java WEB", "DateBase", "Android APP" };
-	String[] content = {"JSP , Hibernate , Spring , Struct",
-			"MySQL , MSSQL , SQLite",
-			"Native code , Android SDK"};
-	int[] imgTitles = { R.drawable.java2, R.drawable.db,
-			R.drawable.android };
+	String[] titles = { "Java WEB", "DateBase", "Android APP", "Front-End" };
+	String[] content = { "JSP , Hibernate , Spring , Struct",
+			"MySQL , MSSQL , SQLite", "Native code , Android SDK",
+			"HTML5 , CSS3 , JavaScrpit" };
+	int[] imgTitles = { R.drawable.java2, R.drawable.db, R.drawable.android,
+			R.drawable.front_end };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Skill extends Activity {
 		setContentView(R.layout.skill);
 
 		listView = (ListView) findViewById(R.id.lv1);
-		listView.setAdapter(new SkillAdapter(this, titles, imgTitles,content));
+		listView.setAdapter(new SkillAdapter(this, titles, imgTitles, content));
 	}
 
 }

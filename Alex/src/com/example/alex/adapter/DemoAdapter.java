@@ -12,16 +12,21 @@ import android.widget.TextView;
 
 import com.example.alex.R;
 
-public class DemoAdapter extends BaseAdapter{
+public class DemoAdapter extends BaseAdapter {
 	String[] titles;
 	Context context;
-	
-	public DemoAdapter(Context context, String[] titles) {
+	String content[];
+	String[] date;
+
+	public DemoAdapter(Context context, String[] titles, String content[],
+			String[] date) {
 		// TODO Auto-generated constructor stub
 		this.titles = titles;
 		this.context = context;
+		this.content = content;
+		this.date = date;
 	}
-	
+
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
@@ -44,33 +49,39 @@ public class DemoAdapter extends BaseAdapter{
 	public View getView(int position, View view, ViewGroup arg2) {
 		// TODO Auto-generated method stub
 		Holder holder;
-		if(view==null){
+		if (view == null) {
 			view = LinearLayout.inflate(context, R.layout.item_demo, null);
 			holder = new Holder();
-			holder.title = (TextView)view.findViewById(R.id.textView1);
-			holder.img = (ImageView)view.findViewById(R.id.imageView2);
+			holder.title = (TextView) view.findViewById(R.id.textView1);
+			holder.img = (ImageView) view.findViewById(R.id.imageView2);
+			holder.content = (TextView) view.findViewById(R.id.textView2);
+			holder.date = (TextView) view.findViewById(R.id.textView3);
 			view.setTag(holder);
-			
-//			TextView title = (TextView)view.findViewById(R.id.textView1);
-		}else{
+
+			// TextView title = (TextView)view.findViewById(R.id.textView1);
+		} else {
 			holder = (Holder) view.getTag();
 		}
-		
+
 		holder.title.setText(titles[position]);
+		holder.content.setText(content[position]);
+		holder.date.setText(date[position]);
 		holder.img.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				((Activity)context).finish();
+				((Activity) context).finish();
 			}
 		});
-		
+
 		return view;
 	}
 
-	class Holder{
+	class Holder {
 		TextView title;
 		ImageView img;
+		TextView content;
+		TextView date;
 	}
 }

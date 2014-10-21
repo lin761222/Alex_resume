@@ -19,22 +19,24 @@ import android.widget.GridView;
 public class MainActivity extends Activity implements OnItemClickListener {
 	final String TAG = getClass().getName();
 	GridView gridView;
-	String[] items = { "基本資料", "專業技能", "個人自傳", "作品集" };
-	int[] items_img={R.drawable.information,R.drawable.skill,R.drawable.information,R.drawable.demo};
+	String[] items = { "基本資料", "專業技能", "作品集", "聯繫我" };
+	int[] items_img = { R.drawable.information, R.drawable.skill,
+			R.drawable.demo, R.drawable.jobs };
 	final int information = 0;
 	final int skill = 1;
-	final int demo = 3;
+	final int demo = 2;
+	final int contact = 3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		gridView = (GridView) findViewById(R.id.gridView1);
-//		MainAdapter mainAdapter = new MainAdapter(this, items);
-//		gridView.setAdapter(mainAdapter);
-		gridView.setAdapter(new MainAdapter(this,items,items_img));
+		// MainAdapter mainAdapter = new MainAdapter(this, items);
+		// gridView.setAdapter(mainAdapter);
+		gridView.setAdapter(new MainAdapter(this, items, items_img));
 		gridView.setOnItemClickListener(this);
-		
+
 		// String a = null;
 		// a.equals(null);
 	}
@@ -45,7 +47,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
@@ -65,6 +66,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		case demo:
 			intent = new Intent(MainActivity.this, Demo.class);
+			startActivity(intent);
+			break;
+		case contact:
+			intent = new Intent(MainActivity.this, Contact.class);
 			startActivity(intent);
 			break;
 		default:
