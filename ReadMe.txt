@@ -1,6 +1,6 @@
-�w��Resume�d�ҹ�@
+﻿針對Resume範例實作
 
-1.information�i�H�A�ɸ��
-2.demo�i�H�A��dialog���²��
-3.��¬���
+1.information可以再補資料
+2.demo可以再做dialog顯示簡圖
+3.單純美化
 

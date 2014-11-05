@@ -20,7 +20,6 @@ public class DemoAdapter extends BaseAdapter {
 
 	public DemoAdapter(Context context, String[] titles, String content[],
 			String[] date) {
-		// TODO Auto-generated constructor stub
 		this.titles = titles;
 		this.context = context;
 		this.content = content;
